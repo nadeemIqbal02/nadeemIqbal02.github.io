@@ -1,5 +1,30 @@
 <html>
 <body>
+
+<h1>How Web Works</h1>
+<p>
+
+I usually wonder why a software engineer doesn’t know what happens when you type a URL in your favorite browser and press Enter.
+
+Browser tries to reach DNS Server to resolve the URL into Server location which is represented by an IP address ( location in the world of Internet ).
+
+But how browser knows that where is DNS server? Your ISP (the company selling you internet service) have one or more DNS servers but how browser knows which one to connect? Your ISP by default assigns you a DNS server while we connect to the internet (Some users change these settings as well). What if there is no mapping found for your ISP’s DNS server against URL? It routes to the “root name servers” which is a type of gatekeeper and All they do is locate an appropriate server for our request to go to next. The root name servers are dispersed around the world and controlled by several separate organizations. The reason for this is to ensure that they won’t all be taken out of commission by a single disaster or failure! I hope you people remember a recent attack on DNS servers using IOT? https://www.technologyreview.com/s/602713/how-the-internet-of-things-took-down-the-internet/
+
+ 
+
+Why Browser needs to go to DNS server to find IP Address if I’ve visited site earlier? Makes sense, so that’s where browser’s local cache plays a pivotal role. Before contacting to DNS, the browser checks its local cache and try to resolve the domain name. If you have visited a site earlier, then it finds the domain to IP mapping otherwise it reaches to DNS for resolution.
+
+Browser got IP Address of the server you want to connect with, now how to reach to that server? That’s where IP (Internet Protocol) comes into picture which most of us would have studied in their early courses that there is a TCP/IP protocol. Your browser uses this protocol to reach to the server through many intermediate routers which keep on moving your message from one router to another until it reaches the final server (IP). The router as the name suggests routes your messages and are intelligent enough to know where it should route next. It's pertinent to mention here that all your messages triggered through the browser don’t follow the same route. There is intelligence behind the scene but not a topic to be discussed.
+
+Thanks to TCP/IP protocol and I’ve reached to the server. How the server knows that message has arrived at its door? The server keeps listening to designated TCP port (usually port 80) and reacts if there is any message on it.
+
+How Server knows that what it should do or how to reach? That’s where web servers come into picture such as IIS, Apache Tomcat etc. These servers have Handlers such as HTTP handler which receives the message when it arrives on the designated port (e.g. port 80), looks into the message to decide what action to be taken and in most of the typical cases it routes to a web page (hosted in the web server), executes it and returns response back. Web Browser receives the message (HTTP response), look at the response contents and eventually renders the web page. That’s how we view beautiful sites in our browser.
+
+I’ve intentionally didn’t go into the detail of HTTP protocol (a format / common language between browser and web server for communication)</p>
+
+<br/>
+<br/>
+
 <h1>Architecture which Never Fails but Scales</h1>
 <p>
 In today’s age, no one can imagine if he is unable to book flight or shop online at any given time due to system failure. Though technology brings everything to your fingertips it’s highly volatile as well at the same time because software must run on a hardware which is built using tens of thousands of small electronic circuits. The probability of failure is high because if the probability of one circuit’s failure is 0.0001 and if there are 10K circuits, the probability of failure is much higher (I believe there is no need to prove 😊).
