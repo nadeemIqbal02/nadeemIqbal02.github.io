@@ -25,7 +25,7 @@ I’ve intentionally didn’t go into the detail of HTTP protocol (a format / co
 <br/>
 <br/>
 
-<h1>Singel Point of Failure</h1>
+<h1>Single Point of Failure</h1>
 <p>
 In today’s age, no one can imagine if he is unable to book flight or shop online at any given time due to system failure. Though technology brings everything to your fingertips it’s highly volatile as well at the same time because software must run on a hardware which is built using tens of thousands of small electronic circuits. The probability of failure is high because if the probability of one circuit’s failure is 0.0001 and if there are 10K circuits, the probability of failure is much higher (I believe there is no need to prove 😊).
 
